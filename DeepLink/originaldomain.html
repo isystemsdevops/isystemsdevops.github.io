@@ -6,6 +6,25 @@
     <!-- <meta http-equiv="refresh" content="0; url =https://isystemsdevops.github.io/DeepLink/desinationdomain.html" /> -->
       
     <meta http-equiv="refresh" content="0; url =https://isys10devsection.net/applinkHomepageNew.aspx" />
+
+    <script>
+        function redirectToStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check if the user is on Android
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=io.miran.jaamwater.package";
+            }
+            // Check if the user is on iOS
+            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/us/app/jaam-water/id1594916133";
+            } 
+            // If neither, you can redirect to a generic page or show an alert
+            else {
+                alert("This app is only available for Android and iOS devices.");
+            }
+        }
+    </script>
     
 </head>
 <body>
