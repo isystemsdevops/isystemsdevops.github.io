@@ -33,7 +33,7 @@
             width: 510px;
 /*             text-align: center; */
 /*             align-items: center; */
-            place-items: center;
+            place-items: center;           
         }
         
         .textstyle {
@@ -45,6 +45,17 @@
             min-width: fit-content;
             border-radius: 27px;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Media query for smaller screens like phones */
+        @media (max-width: 768px) {
+            .image-container {
+                flex-direction: column;
+            }
         }
         
     </style>
