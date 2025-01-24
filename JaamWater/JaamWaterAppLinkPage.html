@@ -57,23 +57,42 @@
             const urlParams = new URLSearchParams(window.location.search);
             const invitationCode = urlParams.get('invitationcode');
             console.log('Received invitation code:', invitationCode);
+            const fibPayment = urlParams.get('fibpayment');
+            console.log('Received fib payment:', fibPayment);
 
-	    // prepare the userAgent
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            // Check if the user is on Android
-            if (/android/i.test(userAgent)) {
-                window.location.href = 'https://play.google.com/store/apps/details?id=io.miran.jaamwater&referrer=invitationcode=' + invitationCode;
-            }
-            // Check if the user is on iOS
-            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = 'https://apps.apple.com/us/app/jaam-water/id1594916133?invitationcode=' + invitationCode;
-            } 
-            // If neither, you can redirect to a generic page or show an alert
-            else {
-                // alert("This app is only available for Android and iOS devices - you might be on windows.");
-                <!-- location.href="https://isys10devsection.net/applinkHomepageNew.aspx"; -->
-	        location.href="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html";
-            }
+	    //if from payment gateway
+	    if (fibPayment !== undefined && fibPayment !== null && fibPayment !== '') {
+	    	try {
+                const response = await fetch('https://your-backend-url/paymentcallback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: '123', status: 'success' })
+                });
+                const html = await response.text();
+                document.write(html);
+            	} catch (error) {
+                	console.error('Error handling request:', error);
+            	}
+	    }
+	    //not from payment gateway - normal link click
+	    else {
+	    	// prepare the userAgent
+            	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            	// Check if the user is on Android
+            	if (/android/i.test(userAgent)) {
+                	window.location.href = 'https://play.google.com/store/apps/details?id=io.miran.jaamwater&referrer=invitationcode=' + invitationCode;
+            	}
+            	// Check if the user is on iOS
+            	else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                	window.location.href = 'https://apps.apple.com/us/app/jaam-water/id1594916133?invitationcode=' + invitationCode;
+            	}
+            	// If neither, you can redirect to a generic page or show an alert
+            	else {
+                	// alert("This app is only available for Android and iOS devices - you might be on windows.");
+                	<!-- location.href="https://isys10devsection.net/applinkHomepageNew.aspx"; -->
+	        	location.href="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html";
+            	}
+	    }
         }
     </script>
 
