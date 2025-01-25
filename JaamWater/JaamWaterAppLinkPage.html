@@ -62,6 +62,7 @@
 
 	    //if from payment gateway
 	    if (fibPayment !== undefined && fibPayment !== null && fibPayment !== '') {
+		console.log('Condition for FIB Payments');
 		//location.href="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html";
 	    	const soapApiUrl = 'https://isys10devsection.net/TInvoiceServiceV1_5.asmx?op=D15_Order_Insert_FIB_Status';
             	const soapAction = 'http://tempuri.org/D15_Order_Insert_FIB_Status'; 
@@ -103,10 +104,12 @@
 	    }
 	    //not from payment gateway - normal link click
 	    else {
+		console.log('Condition normal case - not FIB Payment');
 	    	// prepare the userAgent
             	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             	// Check if the user is on Android
             	if (/android/i.test(userAgent)) {
+			console.log('Condition normal case - not FIB Payment - Android');
 			if (invitationCode !== undefined && invitationCode !== null && invitationCode !== '') {
 			        window.location.href = 'https://play.google.com/store/apps/details?id=io.miran.jaamwater&referrer=invitationCode=' + invitationCode;
 			}
@@ -116,6 +119,7 @@
             	}
             	// Check if the user is on iOS
             	else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+			console.log('Condition normal case - not FIB Payment - iOS');
 			if (invitationCode !== undefined && invitationCode !== null && invitationCode !== '') {
                 		window.location.href = 'https://apps.apple.com/us/app/jaam-water/id1594916133?invitationCode=' + invitationCode;
 			}
@@ -125,6 +129,7 @@
             	}
             	// If neither, you can redirect to a generic page or show an alert
             	else {
+			console.log('Condition normal case - not FIB Payment - Web');
                 	// alert("This app is only available for Android and iOS devices - you might be on windows.");
                 	<!-- location.href="https://isys10devsection.net/applinkHomepageNew.aspx"; -->
 	        	location.href="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html";
