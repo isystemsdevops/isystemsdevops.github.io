@@ -55,7 +55,7 @@
         function redirectToStore() {
 	    // Parse the query string to get the invitation code
             const urlParams = new URLSearchParams(window.location.search);
-            const invitationCode = urlParams.get('invitationcode');
+            const invitationCode = urlParams.get('invitationCode');
             console.log('Received invitation code:', invitationCode);
             const fibPayment = urlParams.get('fibPayment');
             console.log('Received fib payment:', fibPayment);
@@ -80,11 +80,11 @@
             	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             	// Check if the user is on Android
             	if (/android/i.test(userAgent)) {
-                	window.location.href = 'https://play.google.com/store/apps/details?id=io.miran.jaamwater&referrer=invitationcode=' + invitationCode;
+                	window.location.href = 'https://play.google.com/store/apps/details?id=io.miran.jaamwater&referrer=invitationCode=' + invitationCode;
             	}
             	// Check if the user is on iOS
             	else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                	window.location.href = 'https://apps.apple.com/us/app/jaam-water/id1594916133?invitationcode=' + invitationCode;
+                	window.location.href = 'https://apps.apple.com/us/app/jaam-water/id1594916133?invitationCode=' + invitationCode;
             	}
             	// If neither, you can redirect to a generic page or show an alert
             	else {
