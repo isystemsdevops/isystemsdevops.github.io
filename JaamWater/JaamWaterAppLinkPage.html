@@ -81,9 +81,10 @@
                     const response = await fetch(soapApiUrl, {
                          method: 'POST',
                          headers: {
-                            'Content-Type': 'text/xml',
+                            'Content-Type': 'text/xml; charset=utf-8',
                             'SOAPAction': soapAction,
-                         },
+		            'Host': 'https://isys10devsection.net',
+                         }, 
                          body: soapRequest,
                     });
                     if (!response.ok) {
