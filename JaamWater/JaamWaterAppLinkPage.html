@@ -63,12 +63,11 @@
 	    //if from payment gateway
 	    if (fibPayment !== undefined && fibPayment !== null && fibPayment !== '') {
 		//location.href="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html";
-	    	const soapApiUrl = 'https://example.com/soapapi'; // Replace with your SOAP API endpoint
-            	const soapAction = 'urn:yourSOAPAction'; // Replace with the SOAP action, if required
+	    	const soapApiUrl = 'https://isys10devsection.net/TInvoiceServiceV1_5.asmx?op=D15_Order_Insert_FIB_Status';
+            	const soapAction = 'http://tempuri.org/D15_Order_Insert_FIB_Status'; 
             	// SOAP XML Request Body
                 const soapRequest = `
                      <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-                     <soap:Header/>
                      <soap:Body>
                         <D15_Order_Insert_FIB_Status xmlns="http://tempuri.org/">
                            <id>'123'</id>
@@ -82,7 +81,7 @@
                          method: 'POST',
                          headers: {
                             'Content-Type': 'text/xml',
-                            'SOAPAction': 'http://tempuri.org/D15_Order_Insert_FIB_Status',
+                            'SOAPAction': soapAction,
                          },
                          body: soapRequest,
                     });
