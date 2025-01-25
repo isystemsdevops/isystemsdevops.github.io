@@ -52,7 +52,7 @@
 
 
      <script>
-        function redirectToStore() {
+        async function redirectToStore() {
 	    // Parse the query string to get the invitation code
             const urlParams = new URLSearchParams(window.location.search);
             const invitationCode = urlParams.get('invitationCode');
