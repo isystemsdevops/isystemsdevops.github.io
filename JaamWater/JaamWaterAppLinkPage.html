@@ -21,7 +21,7 @@
     <meta property="al:type" content="website" />
     <meta property="al:web:should_fallback" content="true" />
     <!-- <meta property="al:web:url" content="https://isys10devsection.net/applinkHomepageNew.aspx" /> -->
-    <!-- <meta property="al:web:url" content="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html" /> -->
+    <meta property="al:web:url" content="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html" />
 
     <title>Jaam Water Mobile Application</title>
     <style type="text/css">
@@ -57,54 +57,53 @@
             const urlParams = new URLSearchParams(window.location.search);
             const invitationCode = urlParams.get('invitationCode');
             console.log('Received invitation code:', invitationCode);
-            const fibPayment = urlParams.get('fibPayment');
-            console.log('Received fib payment:', fibPayment);
+            // const fibPayment = urlParams.get('fibPayment');
+            // console.log('Received fib payment:', fibPayment);
 
 	    //if from payment gateway
-	    if (fibPayment !== undefined && fibPayment !== null && fibPayment !== '') {
+	    // if (fibPayment !== undefined && fibPayment !== null && fibPayment !== '') {
 		console.log('Condition for FIB Payments');
-		//location.href="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html";
-	    	const soapApiUrl = 'https://isys10devsection.net/TInvoiceServiceV1_5.asmx?op=D15_Order_Insert_FIB_Status';
-            	const soapAction = 'http://tempuri.org/D15_Order_Insert_FIB_Status'; 
+	    	//const soapApiUrl = 'https://isys10devsection.net/TInvoiceServiceV1_5.asmx?op=D15_Order_Insert_FIB_Status';
+            	//const soapAction = 'http://tempuri.org/D15_Order_Insert_FIB_Status'; 
             	// SOAP XML Request Body
-                const soapRequest = `
-                     <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-                     <soap:Body>
-                        <D15_Order_Insert_FIB_Status xmlns="http://tempuri.org/">
-                           <id>'123'</id>
-                           <status>'success'</status>
-                        </D15_Order_Insert_FIB_Status>
-                     </soap:Body>
-                     </soap:Envelope>
-                `;
-	    	try {
-                    const response = await fetch(soapApiUrl, {
-                         method: 'POST',
-                         headers: {
-                            'Content-Type': 'text/xml; charset=utf-8',
-                            'SOAPAction': soapAction,
-		            'Host': 'https://isys10devsection.net',
-                         }, 
-                         body: soapRequest,
-                    });
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const responseText = await response.text();
-                    console.log('SOAP Response:', responseText);
-                    // You can parse the XML response if needed
-                    const parser = new DOMParser();
-                    const xmlDoc = parser.parseFromString(responseText, 'text/xml');
-                    // Extract specific data from the XML response
-                    const result = xmlDoc.getElementsByTagName('YourResponseTag')[0].textContent;
-                    console.log('Extracted Result:', result);
-                    // Handle redirection or other logic based on the response
-                } catch (error) {
-                    console.error('Error calling SOAP API:', error);
-                }
-	    }
+                // const soapRequest = `
+                //     <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+                //     <soap:Body>
+                //        <D15_Order_Insert_FIB_Status xmlns="http://tempuri.org/">
+                //           <id>'123'</id>
+                //           <status>'success'</status>
+                //        </D15_Order_Insert_FIB_Status>
+                //     </soap:Body>
+                //     </soap:Envelope>
+                // `;
+	    	// try {
+      //               const response = await fetch(soapApiUrl, {
+      //                    method: 'POST',
+      //                    headers: {
+      //                       'Content-Type': 'text/xml; charset=utf-8',
+      //                       'SOAPAction': soapAction,
+		    //         'Host': 'https://isys10devsection.net',
+      //                    }, 
+      //                    body: soapRequest,
+      //               });
+      //               if (!response.ok) {
+      //                   throw new Error(`HTTP error! status: ${response.status}`);
+      //               }
+      //               const responseText = await response.text();
+      //               console.log('SOAP Response:', responseText);
+      //               // You can parse the XML response if needed
+      //               const parser = new DOMParser();
+      //               const xmlDoc = parser.parseFromString(responseText, 'text/xml');
+      //               // Extract specific data from the XML response
+      //               const result = xmlDoc.getElementsByTagName('YourResponseTag')[0].textContent;
+      //               console.log('Extracted Result:', result);
+      //               // Handle redirection or other logic based on the response
+      //           } catch (error) {
+      //               console.error('Error calling SOAP API:', error);
+      //           }
+	    // }
 	    //not from payment gateway - normal link click
-	    else {
+	    // else {
 		console.log('Condition normal case - not FIB Payment');
 	    	// prepare the userAgent
             	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -135,7 +134,7 @@
                 	<!-- location.href="https://isys10devsection.net/applinkHomepageNew.aspx"; -->
 	        	//location.href="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html";
             	}
-	    }
+	    // }
         }
     </script>
 
