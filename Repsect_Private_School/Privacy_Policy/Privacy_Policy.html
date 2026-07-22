@@ -1,128 +1,1281 @@
-<!DOCTYPE html>
-<html>
-<body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24558f">
+  <meta name="description" content="Privacy Policy for the New Respect Private School mobile application.">
+  <title>Privacy Policy | New Respect Private School</title>
 
-<h1 style="color:DarkSlateBlue;"><center>Respect Private School Mobile Application</center></h1>
- 
-<h3>Privacy policy</h3>
+  <style>
+    :root {
+      --brand-blue: #24558f;
+      --brand-blue-dark: #173d70;
+      --brand-blue-deep: #112e52;
+      --brand-blue-soft: #eef3fa;
+      --brand-green: #2da769;
+      --brand-green-dark: #187346;
+      --brand-green-soft: #eaf7f0;
+      --brand-yellow: #f4c842;
+      --brand-yellow-soft: #fff7d4;
+      --ink: #172c45;
+      --muted: #5d6b7a;
+      --line: #d9e1ec;
+      --paper: #ffffff;
+      --canvas: #f4f6fa;
+      --shadow-sm: 0 8px 24px rgba(17, 46, 82, 0.08);
+      --shadow-lg: 0 28px 70px rgba(17, 46, 82, 0.13);
+      --radius-sm: 14px;
+      --radius-md: 22px;
+      --radius-lg: 32px;
+      --content-width: 1180px;
+    }
 
-<!--  <img src="isystemslogo.png" alt="W3Schools.com" width="399" height="134">  -->
- 
- <!-- <div class="container">
-      <div class="image">
-        <img src="isystemslogo.png" width="399" height="134">
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 7% 8%, rgba(244, 200, 66, 0.18), transparent 18rem),
+        radial-gradient(circle at 92% 13%, rgba(45, 167, 105, 0.14), transparent 22rem),
+        var(--canvas);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--brand-blue-dark);
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--brand-green-dark);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--brand-yellow);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      padding: 10px 16px;
+      color: var(--brand-blue-deep);
+      background: var(--paper);
+      border: 2px solid var(--brand-blue);
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      font-weight: 800;
+      transform: translateY(-160%);
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .reading-progress {
+      position: fixed;
+      z-index: 80;
+      inset: 0 auto auto 0;
+      width: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-yellow), var(--brand-green));
+      box-shadow: 0 1px 6px rgba(24, 115, 70, 0.24);
+    }
+
+    .page-shell {
+      width: min(var(--content-width), calc(100% - 40px));
+      margin: 24px auto 64px;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 410px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 54px;
+      align-items: center;
+      padding: 56px clamp(28px, 6vw, 72px);
+      color: #ffffff;
+      background:
+        linear-gradient(128deg, rgba(17, 46, 82, 0.99) 0%, rgba(36, 85, 143, 0.97) 58%, rgba(60, 113, 173, 0.94) 100%);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 330px;
+      height: 330px;
+      right: 210px;
+      bottom: -250px;
+      border: 52px solid rgba(244, 200, 66, 0.96);
+      border-radius: 50%;
+      box-shadow: 0 0 0 42px rgba(255, 255, 255, 0.07);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 420px;
+      height: 150px;
+      right: -80px;
+      bottom: -94px;
+      background: var(--brand-green);
+      border-radius: 50% 50% 0 0;
+      transform: rotate(-5deg);
+      opacity: 0.92;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.15em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 4px;
+      background: var(--brand-yellow);
+      border-radius: 999px;
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.6rem, 6vw, 5.15rem);
+      font-weight: 850;
+      letter-spacing: -0.055em;
+      line-height: 0.98;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: clamp(1rem, 1.6vw, 1.16rem);
+      line-height: 1.65;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 8px 14px;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+      font-size: 0.84rem;
+      font-weight: 750;
+    }
+
+    .meta-pill::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--brand-yellow);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(244, 200, 66, 0.17);
+    }
+
+    .logo-card {
+      position: relative;
+      z-index: 2;
+      justify-self: end;
+      width: min(100%, 280px);
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 34px;
+      box-shadow: 0 24px 50px rgba(4, 48, 76, 0.24);
+      transform: rotate(2.5deg);
+    }
+
+    .logo-card::after {
+      content: "RESPECT";
+      position: absolute;
+      right: 20px;
+      bottom: -13px;
+      padding: 5px 12px;
+      color: var(--brand-blue-deep);
+      background: var(--brand-yellow);
+      border: 3px solid var(--paper);
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+    }
+
+    .logo-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+    }
+
+    .privacy-summary {
+      position: relative;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: 1.15fr repeat(3, 1fr);
+      gap: 14px;
+      margin: -34px 34px 44px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(220, 233, 239, 0.9);
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(12px);
+    }
+
+    .summary-lead,
+    .summary-item {
+      min-height: 132px;
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .summary-lead {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--paper);
+      background: var(--brand-blue-deep);
+    }
+
+    .summary-lead small {
+      color: #b8cdea;
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .summary-lead strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+    }
+
+    .summary-item {
+      background: #f7fbfd;
+      border: 1px solid var(--line);
+    }
+
+    .summary-number {
+      display: inline-grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      color: var(--brand-blue-deep);
+      background: var(--brand-yellow);
+      border-radius: 11px;
+      font-size: 0.74rem;
+      font-weight: 900;
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.98rem;
+      line-height: 1.3;
+    }
+
+    .summary-item p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.83rem;
+      line-height: 1.5;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    .table-of-contents {
+      position: sticky;
+      top: 24px;
+      padding: 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toc-label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      color: var(--brand-blue-deep);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .toc-label::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--brand-green);
+      border: 3px solid var(--brand-green-soft);
+      border-radius: 50%;
+    }
+
+    .table-of-contents ol {
+      display: grid;
+      gap: 2px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .table-of-contents li {
+      counter-increment: toc;
+    }
+
+    .table-of-contents a {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 8px;
+      align-items: baseline;
+      padding: 8px 10px;
+      color: var(--muted);
+      border-radius: 10px;
+      font-size: 0.84rem;
+      font-weight: 670;
+      line-height: 1.35;
+      text-decoration: none;
+      transition: color 160ms ease, background 160ms ease, transform 160ms ease;
+    }
+
+    .table-of-contents a::before {
+      content: counter(toc, decimal-leading-zero);
+      color: #8ba0ad;
+      font-size: 0.65rem;
+      font-weight: 850;
+      letter-spacing: 0.03em;
+    }
+
+    .table-of-contents a:hover,
+    .table-of-contents a[aria-current="true"] {
+      color: var(--brand-blue-deep);
+      background: var(--brand-blue-soft);
+      transform: translateX(2px);
+    }
+
+    .table-of-contents a[aria-current="true"]::before {
+      color: var(--brand-blue);
+    }
+
+    .policy-card {
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .policy-intro {
+      padding: clamp(30px, 6vw, 58px);
+      background:
+        linear-gradient(135deg, rgba(234, 247, 253, 0.92), rgba(255, 255, 255, 0.96)),
+        var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-kicker {
+      margin: 0 0 10px;
+      color: var(--brand-green-dark);
+      font-size: 0.74rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .policy-intro h2 {
+      margin: 0;
+      color: var(--brand-blue-deep);
+      font-size: clamp(1.8rem, 3vw, 2.65rem);
+      letter-spacing: -0.035em;
+      line-height: 1.12;
+    }
+
+    .policy-intro p {
+      margin: 20px 0 0;
+      color: #415e71;
+      font-size: 1.06rem;
+      line-height: 1.8;
+    }
+
+    .policy-section {
+      position: relative;
+      padding: clamp(34px, 6vw, 58px);
+      scroll-margin-top: 20px;
+    }
+
+    .policy-section + .policy-section {
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .section-index {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      color: var(--brand-blue-deep);
+      background: linear-gradient(145deg, var(--brand-yellow), #f8dc78);
+      border-radius: 15px;
+      box-shadow: 0 8px 18px rgba(244, 200, 66, 0.24);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--brand-blue-deep);
+      font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+      letter-spacing: -0.027em;
+      line-height: 1.2;
+    }
+
+    .policy-section p {
+      margin: 0 0 16px;
+      color: #415e71;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section ul {
+      display: grid;
+      gap: 11px;
+      margin: 22px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .policy-section li {
+      position: relative;
+      padding: 13px 16px 13px 46px;
+      color: #415e71;
+      background: #f7fbfd;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+    }
+
+    .policy-section li::before {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 18px;
+      width: 11px;
+      height: 6px;
+      border: solid var(--brand-green-dark);
+      border-width: 0 0 3px 3px;
+      transform: rotate(-45deg);
+    }
+
+    .notice {
+      position: relative;
+      margin: 24px 0;
+      padding: 22px 22px 22px 26px;
+      background: var(--brand-yellow-soft);
+      border: 1px solid #f4df65;
+      border-left: 5px solid var(--brand-yellow);
+      border-radius: 14px;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--brand-blue-deep);
+    }
+
+    .notice p {
+      margin: 0;
+      color: #5c572d;
+      font-size: 0.94rem;
+    }
+
+    .location-panel {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      align-items: center;
+      margin: 24px 0;
+      padding: 24px;
+      background: linear-gradient(135deg, var(--brand-green-soft), #fbfdf6);
+      border: 1px solid #cbead8;
+      border-radius: 20px;
+    }
+
+    .location-mark {
+      position: relative;
+      display: grid;
+      width: 94px;
+      height: 94px;
+      place-items: center;
+      margin: auto;
+      color: var(--paper);
+      background: var(--brand-green);
+      border-radius: 50% 50% 50% 10%;
+      box-shadow: 0 13px 25px rgba(24, 115, 70, 0.22);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(-45deg);
+    }
+
+    .location-mark span {
+      transform: rotate(45deg);
+    }
+
+    .location-panel h3 {
+      margin: 0 0 7px;
+      color: var(--brand-green-dark);
+      font-size: 1.15rem;
+    }
+
+    .location-panel p {
+      margin: 0;
+      font-size: 0.94rem;
+    }
+
+    .contact-panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(34px, 6vw, 58px);
+      color: var(--paper);
+      background: var(--brand-blue-deep);
+    }
+
+    .contact-panel::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      right: -54px;
+      bottom: -78px;
+      background: var(--brand-green);
+      border: 28px solid var(--brand-yellow);
+      border-radius: 50%;
+      opacity: 0.82;
+    }
+
+    .contact-panel .section-heading,
+    .contact-panel p,
+    .contact-panel a {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-panel .section-heading h2 {
+      color: var(--paper);
+    }
+
+    .contact-panel p {
+      max-width: 670px;
+      color: #d4dfed;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      padding: 13px 20px;
+      color: var(--brand-blue-deep) !important;
+      background: var(--brand-yellow);
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(244, 200, 66, 0.17);
+      font-weight: 850;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(244, 200, 66, 0.24);
+    }
+
+    .contact-button::after {
+      content: "→";
+      font-size: 1.2rem;
+    }
+
+    .policy-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin: 28px 6px 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .footer-brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--brand-blue-deep);
+      font-weight: 800;
+    }
+
+    .footer-brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 12px rgba(17, 46, 82, 0.12);
+    }
+
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      color: var(--brand-blue-dark);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .page-shell {
+        width: min(100% - 28px, 760px);
+        margin-top: 14px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr 200px;
+        min-height: 360px;
+        gap: 28px;
+      }
+
+      .privacy-summary {
+        grid-template-columns: repeat(3, 1fr);
+        margin-right: 18px;
+        margin-left: 18px;
+      }
+
+      .summary-lead {
+        grid-column: 1 / -1;
+        min-height: auto;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .table-of-contents {
+        position: relative;
+        top: auto;
+        padding: 18px;
+      }
+
+      .table-of-contents ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .table-of-contents a:hover,
+      .table-of-contents a[aria-current="true"] {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 680px) {
+      body {
+        font-size: 15px;
+      }
+
+      .page-shell {
+        width: min(100% - 20px, 540px);
+        margin-bottom: 34px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 38px 25px 48px;
+        border-radius: 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.55rem, 16vw, 4.25rem);
+      }
+
+      .logo-card {
+        order: -1;
+        justify-self: start;
+        width: 112px;
+        padding: 9px;
+        border-radius: 20px;
+        transform: rotate(-2deg);
+      }
+
+      .logo-card img {
+        border-radius: 14px;
+      }
+
+      .logo-card::after {
+        right: -9px;
+        bottom: -10px;
+        padding: 3px 7px;
+        border-width: 2px;
+        font-size: 0.52rem;
+      }
+
+      .privacy-summary {
+        grid-template-columns: 1fr;
+        margin: -24px 10px 28px;
+        padding: 10px;
+        border-radius: 19px;
+      }
+
+      .summary-lead,
+      .summary-item {
+        min-height: auto;
+        padding: 17px;
+      }
+
+      .summary-item {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        column-gap: 12px;
+        align-items: center;
+      }
+
+      .summary-item strong,
+      .summary-item p {
+        grid-column: 2;
+        margin-top: 0;
+      }
+
+      .summary-item .summary-number {
+        grid-row: 1 / span 2;
+      }
+
+      .content-grid {
+        gap: 18px;
+      }
+
+      .table-of-contents {
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      .table-of-contents ol {
+        grid-template-columns: 1fr;
+        max-height: 248px;
+        overflow-y: auto;
+      }
+
+      .policy-card {
+        border-radius: 24px;
+      }
+
+      .section-heading {
+        grid-template-columns: 42px 1fr;
+        gap: 13px;
+      }
+
+      .section-index {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+      }
+
+      .location-panel {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .policy-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      @page {
+        margin: 18mm;
+      }
+
+      body {
+        color: #111111;
+        background: #ffffff;
+        font-size: 11pt;
+      }
+
+      .reading-progress,
+      .table-of-contents,
+      .privacy-summary,
+      .back-to-top {
+        display: none !important;
+      }
+
+      .page-shell {
+        width: 100%;
+        margin: 0;
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr 110px;
+        padding: 28px;
+        color: #111111;
+        background: #ffffff;
+        border: 2px solid #24558f;
+        box-shadow: none;
+      }
+
+      .hero::before,
+      .hero::after,
+      .logo-card::after,
+      .contact-panel::after {
+        display: none;
+      }
+
+      .hero h1,
+      .eyebrow,
+      .hero-copy,
+      .meta-pill {
+        color: #111111;
+      }
+
+      .logo-card {
+        padding: 8px;
+        box-shadow: none;
+      }
+
+      .content-grid {
+        display: block;
+      }
+
+      .policy-card {
+        border: 0;
+        box-shadow: none;
+      }
+
+      .policy-intro,
+      .policy-section,
+      .contact-panel {
+        padding: 26px 0;
+        color: #111111;
+        background: #ffffff;
+        break-inside: avoid;
+      }
+
+      .contact-panel p,
+      .contact-panel .section-heading h2 {
+        color: #111111;
+      }
+
+      .contact-button {
+        padding: 0;
+        background: none;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to privacy policy</a>
+  <div class="reading-progress" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <header class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">New Respect Private School</p>
+        <h1 id="page-title">Privacy Policy</h1>
+        <p class="hero-copy">
+          A clear explanation of how information is handled in the New Respect Private School mobile application, including account data, location sharing, analytics, and your choices.
+        </p>
+        <div class="hero-meta" aria-label="Policy details">
+          <span class="meta-pill">Updated July 4, 2026</span>
+          <span class="meta-pill">About 8 minutes to read</span>
+        </div>
       </div>
-      <div class="text">
-        <h1>Privacy policy.</h1>
+
+      <div class="logo-card">
+        <img src="new-respect-school-logo.png" alt="New Respect Private School logo" width="512" height="512">
       </div>
-    </div> -->
- 
-<!--  <h3 style="display:inline-block; margin-right:150px;">
-  Privacy policy.
-  <img src="isystemslogo.png" width="319.2" height="107.2">
-</h3> -->
+    </header>
 
- 
-<p>We respect your privacy and are committed to protecting it through our compliance with this privacy policy. This Policy describes the types of information we may collect from you or that you may provide (“Personal Information”) in the “Respect” mobile application, and our practices for collecting, using, maintaining, protecting, and disclosing that Personal Information. It also describes the choices available to you regarding our use of your Personal Information and how you can access and update it.</p>
+    <section class="privacy-summary" aria-labelledby="summary-title">
+      <div class="summary-lead">
+        <small>At a glance</small>
+        <strong id="summary-title">Your privacy, explained simply.</strong>
+      </div>
+      <div class="summary-item">
+        <span class="summary-number">01</span>
+        <strong>School-managed accounts</strong>
+        <p>Account details are created and managed by the school administration.</p>
+      </div>
+      <div class="summary-item">
+        <span class="summary-number">02</span>
+        <strong>Location is user-initiated</strong>
+        <p>Location is shared only when a parent submits it from the Map page.</p>
+      </div>
+      <div class="summary-item">
+        <span class="summary-number">03</span>
+        <strong>No sale of personal data</strong>
+        <p>Personally identifiable information is not sold or shared with unaffiliated parties.</p>
+      </div>
+    </section>
 
-<h3>Collection of personal information</h3>
+    <div class="content-grid">
+      <nav class="table-of-contents" aria-label="Privacy policy sections">
+        <p class="toc-label">On this page</p>
+        <ol>
+          <li><a href="#collection">Information collection</a></li>
+          <li><a href="#children">Privacy of children</a></li>
+          <li><a href="#use">Use and processing</a></li>
+          <li><a href="#managing">Managing information</a></li>
+          <li><a href="#disclosure">Disclosure</a></li>
+          <li><a href="#retention">Data retention</a></li>
+          <li><a href="#location">Geolocation</a></li>
+          <li><a href="#analytics">Data analytics</a></li>
+          <li><a href="#notifications">Push notifications</a></li>
+          <li><a href="#resources">External resources</a></li>
+          <li><a href="#security">Information security</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#acceptance">Acceptance</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ol>
+      </nav>
 
-<p>We receive and store all users account information and will be provided to the users in the company before using the App. The only information that we need to collect from the device is the Geolocation data (latitude and longitude) when you submit a location of where one of your children (student) need to be picked up by the school bus and dropped off after the School is finished  - all other pages in the App does not collect Geolocation data.</p>
+      <main id="main-content" class="policy-card">
+        <section class="policy-intro" aria-labelledby="introduction-title">
+          <p class="section-kicker">Our commitment</p>
+          <h2 id="introduction-title">Respecting and protecting your information</h2>
+          <p>
+            We respect your privacy and are committed to protecting it through our compliance with this Privacy Policy. This Policy describes the types of information we may collect from you, or that you may provide, when using the New Respect Private School mobile application. It also explains how we collect, use, maintain, protect, and disclose that information, as well as the choices available to you and how you may access or update your information.
+          </p>
+        </section>
 
-</p>You do not need to provide us with any Personal Information, your username and password will be provided by your organization, and all app features will be available to you without any restrictions; if you do not have an account yet please contact your HR or IT admin to setup a new account.</p>
+        <section class="policy-section" id="collection" aria-labelledby="collection-title">
+          <div class="section-heading">
+            <span class="section-index">01</span>
+            <h2 id="collection-title">Collection of personal information</h2>
+          </div>
+          <p>
+            We receive and store user account information that is created by the school administration and provided to users before they begin using the App. The only information collected directly from the device is geolocation data (latitude and longitude), and only when you submit a location where your child needs to be picked up by the school bus and dropped off after school. Other pages in the App do not collect geolocation data.
+          </p>
+          <div class="notice">
+            <strong>You control when location is shared.</strong>
+            <p>The App does not continuously collect your location. A location is sent only when you deliberately share it on the Map page.</p>
+          </div>
+          <p>
+            You do not need to enter additional Personal Information to use the App. Your username and password are provided by your organization, and all App features are available without additional personal-data submission. If you do not yet have an account, please contact the school administration or your IT administrator to create one.
+          </p>
+        </section>
 
-<h3>Privacy of children</h3>
+        <section class="policy-section" id="children" aria-labelledby="children-title">
+          <div class="section-heading">
+            <span class="section-index">02</span>
+            <h2 id="children-title">Privacy of children</h2>
+          </div>
+          <p>
+            We do not knowingly collect Personal Information directly from children under the age of 18. The App does not contain fields through which children can add or submit Personal Information. Required student profile information is collected during account creation by the school administration in the presence of a parent or guardian.
+          </p>
+          <p>
+            If you have reason to believe that a child under the age of 18 has provided Personal Information to us through the Mobile Application or Services, please contact us and request that the information be deleted.
+          </p>
+        </section>
 
-</p>We do not knowingly collect any Personal Information from children under the age of 18 - In the App in general there is no place or fields to add or submit any Personal Information, and all required profile information will be collected at the time of Account creation by the School administration in the presence of the Parents.</p>
-</p>If you have reason to believe that a child under the age of 18 has provided Personal Information to us through the Mobile Application and Services, please contact us to request that we delete that child’s Personal Information from our Services.</p>
+        <section class="policy-section" id="use" aria-labelledby="use-title">
+          <div class="section-heading">
+            <span class="section-index">03</span>
+            <h2 id="use-title">Use and processing of collected information</h2>
+          </div>
+          <p>
+            To make the Mobile Application and Services available to you, or to meet a legal obligation, we may need to use Personal Information entered during the account-creation process by the school administration in the presence of a parent or guardian.
+          </p>
+          <p>Anonymous analytics information may also be collected while you use App features and navigate between pages. Information may be used to:</p>
+          <ul>
+            <li>Improve the user experience.</li>
+            <li>Run and operate the Mobile Application’s core functions.</li>
+            <li>Detect errors within the App so they can be investigated and resolved in future updates.</li>
+          </ul>
+          <p>Processing of Personal Information depends on how you interact with the Mobile Application and Services, where you are located, and whether one or more of the following applies:</p>
+          <ul>
+            <li>You have given consent for one or more specific purposes.</li>
+            <li>The information is necessary to perform an agreement with you or meet related pre-contractual obligations.</li>
+            <li>Processing is necessary to comply with a legal obligation that applies to you.</li>
+            <li>Processing relates to a task carried out in the public interest or in the exercise of official authority vested in us.</li>
+            <li>Processing is necessary for legitimate interests pursued by us or by a third party.</li>
+          </ul>
+        </section>
 
-<h3>Use and processing of collected information</h3>
- 
+        <section class="policy-section" id="managing" aria-labelledby="managing-title">
+          <div class="section-heading">
+            <span class="section-index">04</span>
+            <h2 id="managing-title">Managing your information</h2>
+          </div>
+          <p>
+            Certain Personal Information cannot be deleted directly through the App because account information is created, added, and managed by the school administration.
+          </p>
+          <p>
+            This information is kept securely and is not shared with other parents or third-party organizations. It is used only to manage the school’s systems and individual user accounts.
+          </p>
+          <p>
+            To edit or delete your Personal Information, or to permanently delete your account, contact the school administration or contact us using the details at the end of this Policy.
+          </p>
+        </section>
 
-</p>In order to make the Mobile Application and Services available to you, or to meet a legal obligation, we may need to collect and use certain Personal Information that are filled during the Account creation process by the School administration and the presence of the Parents.</p>
-</p>Some Analytics information will be collected anonymously while you are using the App functinalities and navigating the different pages.</p>
-</p>Any of the information we collect from you may be used for the following purposes:</p>
- 
-<ul>
-  <li>Improve user experience</li>
-  <li>Run and operate the Mobile Application core functions</li>
-  <li>Detect any errors that may occur within the App which will be investigated and resolved in future App updates.</li>
-</ul>
+        <section class="policy-section" id="disclosure" aria-labelledby="disclosure-title">
+          <div class="section-heading">
+            <span class="section-index">05</span>
+            <h2 id="disclosure-title">Disclosure of information</h2>
+          </div>
+          <p>
+            We do not share personally identifiable information with unaffiliated third parties. Where third-party services support App functions, they are used only as described in this Policy.
+          </p>
+        </section>
 
-</p>Processing your Personal Information depends on how you interact with the Mobile Application and Services, where you are located in the world and if one of the following applies:</p>
+        <section class="policy-section" id="retention" aria-labelledby="retention-title">
+          <div class="section-heading">
+            <span class="section-index">06</span>
+            <h2 id="retention-title">Retention of information</h2>
+          </div>
+          <p>
+            We retain and use Personal Information for as long as your user account remains active and for the period necessary to enforce our agreements, resolve disputes, and comply with any longer retention period required or permitted by law.
+          </p>
+          <p>
+            We may use aggregated data derived from or incorporating your Personal Information after you update or delete it, but not in a manner that identifies you personally. Personal Information is deleted when the retention period expires. After deletion, rights that require the information to remain available—including access, erasure, rectification, and data portability—cannot be exercised for that deleted information.
+          </p>
+        </section>
 
-<ul>
-  <li>You have given your consent for one or more specific purposes.</li>
-  <li>Provision of information is necessary for the performance of an agreement with you and/or for any pre-contractual obligations thereof.</li>
-  <li>Processing is necessary for compliance with a legal obligation to which you are subject.</li>
-  <li>Processing is related to a task that is carried out in the public interest or in the exercise of official authority vested in us.</li>
-  <li>Processing is necessary for the purposes of the legitimate interests pursued by us or by a third party.</li>
-</ul>
- 
+        <section class="policy-section" id="location" aria-labelledby="location-title">
+          <div class="section-heading">
+            <span class="section-index">07</span>
+            <h2 id="location-title">Geolocation information</h2>
+          </div>
+          <div class="location-panel">
+            <div class="location-mark" aria-hidden="true"><span>Map<br>only</span></div>
+            <div>
+              <h3>Shared only when needed</h3>
+              <p>The App does not collect your location continuously or without your knowledge. Location is used only on the Map page, where a parent may manually share a home location.</p>
+            </div>
+          </div>
+          <p>
+            A location shared by a user helps the school administration understand where students are distributed within the city and plan suitable collection and drop-off routes between school and home.
+          </p>
+          <p>
+            We do not store a history of locations in our database. Only the most recently shared location is used.
+          </p>
+        </section>
 
-<h3>Managing information</h3>
+        <section class="policy-section" id="analytics" aria-labelledby="analytics-title">
+          <div class="section-heading">
+            <span class="section-index">08</span>
+            <h2 id="analytics-title">Data analytics</h2>
+          </div>
+          <p>
+            Our Mobile Application and Services use third-party analytics tools—Firebase Analytics and Firebase Crashlytics—that collect standard App activity, usage, and diagnostic information.
+          </p>
+          <p>
+            This information is used to compile statistical reports about activity, such as how frequently users visit the Mobile Application and general usage trends. We use these reports to monitor performance, diagnose problems, and improve the Mobile Application and Services.
+          </p>
+          <p>
+            We do not use third-party analytics tools to collect personally identifiable information or associate statistical reports with an individual user.
+          </p>
+        </section>
 
-</p>You are not able to delete certain Personal Information through the App. All information are created, added and managed by the school administration.</p>
+        <section class="policy-section" id="notifications" aria-labelledby="notifications-title">
+          <div class="section-heading">
+            <span class="section-index">09</span>
+            <h2 id="notifications-title">Push notifications</h2>
+          </div>
+          <p>
+            We offer push notifications that you may voluntarily enable. To deliver notifications to the correct device, we use Firebase, which relies on a unique token for each device. This token does not contain personal information or direct identification. You may stop receiving push notifications at any time through your device settings.
+          </p>
+        </section>
 
-</p>These information are kept safely and not shared with any other parents or any third party organization; they are used only for the purpose of managing the systems and user account separately.</p>
- 
-</p>If you would like to edit/delete your Personal Information or permanently delete your account, you can simply do so by contacting the school administration or by contacting us.</p>
+        <section class="policy-section" id="resources" aria-labelledby="resources-title">
+          <div class="section-heading">
+            <span class="section-index">10</span>
+            <h2 id="resources-title">Links to other resources</h2>
+          </div>
+          <p>
+            The Mobile Application and Services may contain tutorials and educational videos, primarily from YouTube. These resources are reviewed and approved by the systems administrators before they are made available to parents in the App.
+          </p>
+        </section>
 
-<h3>Disclosure of information</h3>
+        <section class="policy-section" id="security" aria-labelledby="security-title">
+          <div class="section-heading">
+            <span class="section-index">11</span>
+            <h2 id="security-title">Information security</h2>
+          </div>
+          <p>
+            Information is stored on computer servers in a controlled, secure environment protected from unauthorized access, use, or disclosure. We maintain reasonable administrative, technical, and physical safeguards designed to protect Personal Information in our control and custody from unauthorized access, use, modification, and disclosure.
+          </p>
+          <div class="notice">
+            <strong>No method is completely risk-free.</strong>
+            <p>We apply reasonable safeguards and continually work to protect information, but no electronic storage or transmission method can guarantee absolute security.</p>
+          </div>
+        </section>
 
-</p>We will not be sharing any personally identifiable information with third parties and will not share any information with unaffiliated third parties.</p>
+        <section class="policy-section" id="changes" aria-labelledby="changes-title">
+          <div class="section-heading">
+            <span class="section-index">12</span>
+            <h2 id="changes-title">Changes and amendments</h2>
+          </div>
+          <p>
+            We may modify this Policy or its terms related to the Mobile Application and Services at our discretion. When we do, we will revise the updated date on this page and may post a notification in the Mobile Application, send an email, or provide notice using other contact information you have supplied.
+          </p>
+          <p>
+            Unless otherwise stated, an updated version of this Policy becomes effective when it is posted. Continued use of the Mobile Application and Services after the effective date of a revised Policy constitutes consent to those changes. We will not, without your consent, use Personal Information in a manner materially different from what was stated when the information was collected.
+          </p>
+        </section>
 
-<h3>Retention of information</h3>
+        <section class="policy-section" id="acceptance" aria-labelledby="acceptance-title">
+          <div class="section-heading">
+            <span class="section-index">13</span>
+            <h2 id="acceptance-title">Acceptance of this policy</h2>
+          </div>
+          <p>
+            By accessing and using the Mobile Application and Services and submitting information, you acknowledge that you have read this Policy and agree to its terms and conditions. If you do not agree to this Policy, you are not authorized to access or use the Mobile Application and Services.
+          </p>
+        </section>
 
-</p>We will retain and use your Personal Information for the period necessary as long as your user account remains active, to enforce our agreements, resolve disputes, and unless a longer retention period is required or permitted by law.</p>
+        <section class="contact-panel" id="contact" aria-labelledby="contact-title">
+          <div class="section-heading">
+            <span class="section-index">14</span>
+            <h2 id="contact-title">Contacting us</h2>
+          </div>
+          <p>
+            If you have questions, concerns, or complaints about this Policy or the information we hold about you—or if you wish to exercise your rights—please contact us. We will make every reasonable effort to resolve requests and disputes within the timescales required by applicable data-protection laws.
+          </p>
+          <a class="contact-button" href="mailto:info@isystems.tech">info@isystems.tech</a>
+        </section>
+      </main>
+    </div>
 
-</p>We may use any aggregated data derived from or incorporating your Personal Information after you update or delete it, but not in a manner that would identify you personally. Once the retention period expires, Personal Information shall be deleted. Therefore, the right to access, the right to erasure, the right to rectification, and the right to data portability cannot be enforced after the expiration of the retention period.</p>
+    <footer class="policy-footer">
+      <div class="footer-brand">
+        <img src="new-respect-school-logo.png" alt="" width="38" height="38">
+        <span>New Respect Private School</span>
+      </div>
+      <span>This document was last updated on July 4, 2026.</span>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </footer>
+  </div>
 
-<h3>Geolocation Information</h3>
+  <script>
+    (() => {
+      const progress = document.querySelector('.reading-progress');
+      const sections = [...document.querySelectorAll('main section[id]')];
+      const links = [...document.querySelectorAll('.table-of-contents a')];
 
-</p>The app does not collect your location continuously or without your knowledge - it is used only on the Map page where parents can share their home location manually.</p>
- 
-</p>The shared location by the user will be used by the school administration to know where the students are distributed in the city and how they can be collected and dropped off from and to their homes in the best way possible.</p>
+      const updateProgress = () => {
+        const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percentage = documentHeight > 0 ? (window.scrollY / documentHeight) * 100 : 0;
+        progress.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
+      };
 
-</p>we don't collect the location history in our Database; only the last shared location will be used.</p>
- 
-<h3>Data analytics</h3>
+      const sectionObserver = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-</p>Our Mobile Application and Services use third-party analytics tools (Firebase Analytics and Crashlytics) that use information-gathering technologies to collect standard internet activity and usage information.</p>
-</p>The information gathered is used to compile statistical reports on User activity such as how often Users visit our Mobile Application and Services, the app general usage trend, etc.</p>
- </p>We use the information obtained from these analytics tools to monitor the performance and improve our Mobile Application and Services. We do not use third-party analytics tools to track or to collect any personally identifiable information of our Users and we will not associate any information gathered from the statistical reports with any individual User.</p>
+        if (!visible) return;
 
-<h3>Push notifications</h3>
+        links.forEach((link) => {
+          const isCurrent = link.getAttribute('href') === `#${visible.target.id}`;
+          if (isCurrent) {
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }, {
+        rootMargin: '-15% 0px -65% 0px',
+        threshold: [0, 0.15, 0.4]
+      });
 
-</p>We offer push notifications to which you may voluntarily subscribe at any time. To make sure push notifications reach the correct devices, we use a third-party push notifications provider (Firebase) who relies on a unique token for each device but it does not share or hold any personal information or identification, at any time, you wish to stop receiving push notifications, simply adjust your device settings accordingly.</p>
-
-<h3>Links to other resources</h3>
-
-</p>The Mobile Application and Services contain tutorials and educational videos from YouTube mainly - these videos are checked and approved by the systems administrators before they become available to Parents on their App.</p>
-
-<h3>Information security</h3>
-
-</p>We secure information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use, or disclosure. We maintain reasonable administrative, technical, and physical safeguards in an effort to protect against unauthorized access, use, modification, and disclosure of Personal Information in our control and custody.</p>
-
-<h3>Changes and amendments</h3>
-
-</p>We reserve the right to modify this Policy or its terms related to the Mobile Application and Services at any time at our discretion. When we do, we will revise the updated date at the bottom of this page, post a notification in the Mobile Application, send you an email to notify you. We may also provide notice to you in other ways at our discretion, such as through the contact information you have provided.</p>
-
-</p>An updated version of this Policy will be effective immediately upon the posting of the revised Policy unless otherwise specified. Your continued use of the Mobile Application and Services after the effective date of the revised Policy (or such other act specified at that time) will constitute your consent to those changes. However, we will not, without your consent, use your Personal Information in a manner materially different than what was stated at the time your Personal Information was collected.</p>
-
-<h3>Acceptance of this policy</h3>
-
-</p>You acknowledge that you have read this Policy and agree to all its terms and conditions. By accessing and using the Mobile Application and Services and submitting your information you agree to be bound by this Policy. If you do not agree to abide by the terms of this Policy, you are not authorized to access or use the Mobile Application and Services.</p>
-
-<h3>Contacting us</h3>
-
-</p>If you have any questions, concerns, or complaints regarding this Policy, the information we hold about you, or if you wish to exercise your rights, we encourage you to contact us using the details below:</p>
- 
- <a href = "mailto: info@isystems.tech">info@isystems.tech</a>
-
-</p>We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.</p>
-
-</p>This document was last updated on July 04, 2026</p>
-
+      sections.forEach((section) => sectionObserver.observe(section));
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+    })();
+  </script>
 </body>
-</html> 
+</html>
