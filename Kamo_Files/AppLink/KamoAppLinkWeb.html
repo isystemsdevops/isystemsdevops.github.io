@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta property="fb:app_id" content="164166812876671" />
+    <meta property="al:ios:url" content="https://link.jaamwater.com/homepage*" />
+    <meta property="al:ios:app_store_id" content="1594916133" />
+    <meta property="al:ios:app_name" content="Jaam Water" />
+    <meta property="al:android:url" content="https://link.jaamwater.com/homepage*" />
+    <meta property="al:android:app_name" content="Jaam Water" />
+    <meta property="al:android:class" content="io.miran.jaamwater.MainActivity" />
+    <meta property="al:android:package" content="io.miran.jaamwater" />
+    <meta property="al:description" content="order water from any location" />
+    <meta property="al:image" content="https://isystemsdevops.github.io/DeepLink/jaamwaterAD.jpg" />
+    <meta property="al:type" content="website" />
+    <meta property="al:web:should_fallback" content="true" />
+<!--     <meta property="al:web:url" content="https://isys10devsection.net/applinkHomepageNew.aspx" /> -->
+    <meta property="al:web:url" content="https://isystemsdevops.github.io/JaamWater/AppLink/AppLinkWeb.html" />
+
+    <title>Jaam Water Mobile Application</title>
+    
+    <style type="text/css">
+        /* your CSS goes here*/
+                
+        .main-wrapper {
+            box-sizing: border-box;
+            width: 100vw;
+            position:absolute;
+            top:10vh;
+        }
+        
+        .logostyle img {
+            height: 210px;
+            width: 510px;
+            /* text-align: center; */
+            /* align-items: center; */
+            place-items: center;           
+        }
+        
+        .textstyle {
+          font-size: 30px;
+          text-align: center;
+        }
+
+        .rowcontainerstyle {
+            min-width: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            /* align-items: center; */
+            /* clear: left; */
+        }
+
+        .buttonstyle {
+            height: 30px;
+            width: 50px;
+            border-radius: 27px;
+            text-align: center;
+            /* margin-right: 20px;
+            margin-left: 20px; */
+        }
+
+        /* Media query for smaller screens like phones */
+        @media (max-width: 768px) {
+        /* @media only screen and (max-width: 768px) { */
+            .rowstyle {
+                flex-direction: column;
+            }
+            .textstyle {
+                font-size: 75px;
+            }
+        }
+        
+    </style>
+    
+    <link href="bootstrap/dist/css/style.min.css" rel="stylesheet" />
+
+
+</head>
+
+<!-- <body onload="redirectToStore()"> -->
+<body>
+    <form id="form1" runat="server">
+        <div class="main-wrapper"  id="">
+            <br />
+            
+            <div class="logostyle" style="display: grid; place-items: center;">
+              <img src="https://isystemsdevops.github.io/JaamWater/AppLink/JaamWater-Icon-Transparent.png" alt="Jaam Logo" >
+            </div> 
+            
+            <br />
+            <br />
+            <br />
+            
+            <div class="textstyle">
+                Please download the JaamWater app on your phone to check this link.
+            </div>
+            
+<!--             <br />
+            <div class="buttonstyle">
+                <a href="https://apps.apple.com/us/app/jaam-water/id1594916133">
+                   <img src="https://isystemsdevops.github.io/JaamWater/AppLink/AppStoreButton.jpg"/>
+                </a>
+            </div>
+            <br />
+            <div class="buttonstyle">
+                <a href="https://play.google.com/store/apps/details?id=io.miran.jaamwater&hl=en_US&gl=US">
+                   <img src="https://isystemsdevops.github.io/JaamWater/AppLink/PlayStoreButton.jpg" />
+                </a>
+            </div> -->
+
+            <br />
+            <br />
+            <br />
+
+            <div class="rowcontainerstyle">
+              <a href="https://apps.apple.com/us/app/jaam-water/id1594916133">
+                   <img src="https://isystemsdevops.github.io/JaamWater/AppLink/AppStoreButton.jpg" hspace="20"/>
+              </a>
+<!--               <hr> -->
+              <br />
+              <a href="https://play.google.com/store/apps/details?id=io.miran.jaamwater&hl=en_US&gl=US">
+                   <img src="https://isystemsdevops.github.io/JaamWater/AppLink/PlayStoreButton.jpg" hspace="20"/>
+              </a>
+            </div>
+            
+        </div>
+    </form>
+</body>
+
+</html>
