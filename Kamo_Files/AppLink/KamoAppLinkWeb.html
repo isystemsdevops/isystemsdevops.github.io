@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="description" content="Download Kamo for iPhone or Android to view your shared link." />
     <meta property="fb:app_id" content="164166812876671" />
     <meta property="al:ios:url" content="https://link.kamo.com/homepage*" />
     <meta property="al:ios:app_store_id" content="6450489920" />
@@ -17,105 +19,118 @@
     <meta property="al:web:should_fallback" content="true" />
     <meta property="al:web:url" content="https://isystemsdevops.github.io/Kamo_Files/AppLink/KamoAppLinkWeb.html" />
 
-    <title>Kamo Mobile Application</title>
-    
-    <style type="text/css">
-        /* your CSS goes here*/
-                
-        .main-wrapper {
-            box-sizing: border-box;
-            width: 100vw;
-            position:absolute;
-            top:10vh;
+    <title>Download Kamo</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #252e50;
+            --muted: #667085;
+            --red: #e5322c;
         }
-        
-        .logostyle img {
-            height: 384px;
-            width: 384px;
-            /* text-align: center; */
-            /* align-items: center; */
-            place-items: center;           
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            margin: 0;
+            overflow-wrap: break-word;
+            background: #f7f8fa;
+            color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
         }
-        
-        .textstyle {
-          font-size: 30px;
-          text-align: center;
+        .page {
+            min-height: 100vh;
+            min-height: 100svh;
+            display: grid;
+            place-items: center;
+            padding: clamp(20px, 5vh, 56px) clamp(12px, 4vw, 32px);
+            padding-top: max(clamp(20px, 5vh, 56px), env(safe-area-inset-top));
+            padding-bottom: max(clamp(20px, 5vh, 56px), env(safe-area-inset-bottom));
+            padding-left: max(clamp(12px, 4vw, 32px), env(safe-area-inset-left));
+            padding-right: max(clamp(12px, 4vw, 32px), env(safe-area-inset-right));
         }
-
-        .rowcontainerstyle {
-            min-width: fit-content;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-            /* align-items: center; */
-            /* clear: left; */
-        }
-
-        .buttonstyle {
-            height: 30px;
-            width: 50px;
-            border-radius: 27px;
+        .download {
+            width: 100%;
+            max-width: 536px;
+            min-width: 0;
+            padding: clamp(28px, 5vw, 44px) clamp(20px, 5vw, 40px) 32px;
+            background: #fff;
+            border: 1px solid #e8ebf0;
+            border-radius: 28px;
+            box-shadow: 0 16px 48px -24px rgba(37, 46, 80, .18);
             text-align: center;
-            /* margin-right: 20px;
-            margin-left: 20px; */
         }
-
-        /* Media query for smaller screens like phones */
-        @media (max-width: 768px) {
-        /* @media only screen and (max-width: 768px) { */
-            .rowstyle {
-                flex-direction: column;
-            }
-            .textstyle {
-                font-size: 75px;
-            }
+        .logo { display: block; width: clamp(80px, 16vw, 104px); height: auto; margin: 0 auto clamp(20px, 4vw, 28px); }
+        .eyebrow {
+            margin: 0 0 12px;
+            color: var(--red);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
         }
-        
+        h1 { margin: 0; font-size: clamp(28px, 6vw, 38px); line-height: 1.16; font-weight: 700; letter-spacing: -.04em; }
+        .description { max-width: 340px; margin: 18px auto 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+        .stores { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin: 30px 0 0; }
+        .store-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 190px;
+            max-width: 100%;
+            min-height: 48px;
+            aspect-ratio: 190 / 56;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: transparent;
+            overflow: hidden;
+            transition: transform .18s ease, box-shadow .18s ease;
+        }
+        .store-link img { display: block; width: 100%; height: 100%; object-fit: contain; }
+        @media (hover: hover) and (pointer: fine) {
+            .store-link:hover { transform: translateY(-2px); box-shadow: 0 5px 12px #252e5024; }
+        }
+        .store-link:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; }
+        .availability { margin: 16px 0 0; font-size: 12px; line-height: 1.5; color: var(--muted); }
+        .note { margin: 30px 0 0; padding-top: 22px; border-top: 1px solid #edf0f4; font-size: 13px; line-height: 1.65; color: var(--muted); }
+        .note strong { display: block; margin-bottom: 3px; color: var(--ink); font-weight: 600; }
+        @media (max-width: 480px) {
+            .download { border-radius: 24px; padding-bottom: 26px; }
+            .description { font-size: 15px; }
+            .stores { flex-direction: column; margin-top: 26px; }
+            .note { margin-top: 26px; }
+        }
+        /* Leave room for browser controls on short or landscape screens. */
+        @media (max-height: 600px) and (min-width: 481px) {
+            .download { padding-top: 24px; padding-bottom: 24px; }
+            .logo { width: 72px; margin-bottom: 16px; }
+            h1 { font-size: 30px; }
+            .description { margin-top: 12px; }
+            .stores { margin-top: 20px; }
+            .note { margin-top: 20px; padding-top: 16px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .store-link { transition: none; }
+            .store-link:hover { transform: none; }
+        }
     </style>
-    
-    <link href="bootstrap/dist/css/style.min.css" rel="stylesheet" />
-
-
 </head>
-
-    
 <body>
-    <form id="form1" runat="server">
-        <div class="main-wrapper"  id="">
-            <br />
-            
-            <div class="logostyle" style="display: grid; place-items: center;">
-              <img src="https://isystemsdevops.github.io/Kamo_Files/Assets/kamo-logo-512512.png" alt="Kamo Logo" >
-            </div> 
-            
-            <br />
-            <br />
-            <br />
-            
-            <div class="textstyle">
-                Please download the Kamo app on your phone to check this link.
-            </div>
-            
-
-            <br />
-            <br />
-            <br />
-
-            <div class="rowcontainerstyle">
-              <a href="https://apps.apple.com/us/app/kamo-%DA%A9%D8%A7%D9%85%DB%86-speed-camera/id6450489920">
-                   <img src="https://isystemsdevops.github.io/JaamWater/AppLink/AppStoreButton.jpg" hspace="20"/>
-              </a>
-
-              <br />
-                
-              <a href="https://play.google.com/store/apps/details?id=tech.isystems.kamo&hl=en_US&gl=US">
-                   <img src="https://isystemsdevops.github.io/JaamWater/AppLink/PlayStoreButton.jpg" hspace="20"/>
-              </a>
-            </div>
-            
-        </div>
-    </form>
+    <main class="page">
+        <section class="download" aria-labelledby="download-title">
+            <img class="logo" src="https://isystemsdevops.github.io/Kamo_Files/Assets/kamo-logo-512512.png" width="104" height="104" alt="Kamo" />
+            <p class="eyebrow">Kamo · Speed Camera</p>
+            <h1 id="download-title">Your link opens<br />in Kamo.</h1>
+            <p class="description">Download the app on your phone to view what’s been shared with you.</p>
+            <nav class="stores" aria-label="Download the Kamo app">
+                <a class="store-link" href="https://apps.apple.com/us/app/kamo-%DA%A9%D8%A7%D9%85%DB%86-speed-camera/id6450489920" aria-label="Download Kamo on the App Store">
+                    <img src="https://isystemsdevops.github.io/JaamWater/AppLink/AppStoreButton.jpg" alt="Download on the App Store" width="190" height="56" />
+                </a>
+                <a class="store-link" href="https://play.google.com/store/apps/details?id=tech.isystems.kamo&amp;hl=en_US&amp;gl=US" aria-label="Get Kamo on Google Play">
+                    <img src="https://isystemsdevops.github.io/JaamWater/AppLink/PlayStoreButton.jpg" alt="Get it on Google Play" width="190" height="56" />
+                </a>
+            </nav>
+            <p class="availability">Available for iPhone and Android</p>
+            <p class="note"><strong>Already have Kamo?</strong>Open this link on your phone to continue.</p>
+        </section>
+    </main>
 </body>
-
 </html>
